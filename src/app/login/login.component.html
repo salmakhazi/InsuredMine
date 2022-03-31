@@ -1,0 +1,35 @@
+<h3>Login User Details</h3>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12" style="margin-top: 2rem">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <form class="needs-validation" [formGroup]="loginForm">
+            <div class="form-row">
+              <div class="col-md-12 mb-12">
+                <label for="validationCustom01">User Name</label>
+                <input class="form-control" type="text" formControlName="name" placeholder="User Name">
+                <div *ngIf="loginForm.controls.name?.['touched'] && !loginForm.controls.name.valid"
+                  class="text text-danger mt-1">
+                  User Name is required
+                </div>
+              </div>
+              <div class="col-md-12 mb-12">
+                <label for="validationCustom01">Password</label>
+                <input class="form-control" type="password" formControlName="password" placeholder="password">
+                <div *ngIf="loginForm.controls.password?.['touched'] && !loginForm.controls.password.valid"
+                  class="text text-danger mt-1">
+                  Enter Password
+
+                </div>
+
+              </div>
+              <button style="margin-top: 10px;" class="btn btn-primary" (click)="Login()">Submit</button>&nbsp;&nbsp;
+              <button style="margin-top: 10px;" class="btn btn-light" (click)="goBack()">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

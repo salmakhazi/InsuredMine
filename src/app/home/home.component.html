@@ -1,0 +1,23 @@
+<h3>
+        Successful Insurance Agents Use InsuredMine
+        Don’t chase down important information across different platforms. Use InsuredMine and keep everything under one
+        roof instead.
+</h3>
+<div>
+        <h3>This is to select Users From DB </h3>
+        <div class="container-fluid">
+                <textarea class="form-control" [(ngModel)]="text" (keyup)="onclick(text)">
+                </textarea>
+
+                <div class="home" *ngIf="listUsers">
+                        <ul *ngFor="let list of user">
+                                <li (click)="onItemSelect(list.name)" class="dropdown-item">
+                                        {{list.name}}
+                                </li>
+                        </ul>
+                </div>
+
+
+        </div>
+
+</div>
